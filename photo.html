@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Galleries</title>
+    <link rel="stylesheet" href="photos.css">
+    <style>
+        /* photos.css */
+
+body {
+    font-family: "Times New Roman", Times, serif; /* Changed to Times New Roman */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+
+header {
+    background-color: #6a0dad; /* Purple color */
+    color: #fff;               /* Keep text color white */
+    padding: 15px 0;
+    font-weight: normal;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.intro {
+    text-align: center;
+    padding: 20px;
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(-50%); /* Start from above */
+        opacity: 0; /* Start invisible */
+    }
+    to {
+        transform: translateY(0); /* Move into position */
+        opacity: 1; /* Fade in */
+    }
+}
+
+.intro h1, .intro p {
+    opacity: 0; /* Initially hidden */
+    animation: slideInUp 0.5s ease forwards; /* Apply animation */
+    animation-delay: 0.5s; /* Delay for paragraph */
+}
+
+.intro:hover h1 {
+    animation: slideInUp 0.5s ease forwards; /* Animation for heading on hover */
+}
+
+.intro:hover p {
+    animation: slideInUp 0.7s ease forwards; /* Animation for paragraph on hover */
+}
+
+
+.gallery {
+    padding: 20px;
+}
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%); /* Start from the left */
+        opacity: 0; /* Start invisible */
+    }
+    to {
+        transform: translateX(0); /* Move into position */
+        opacity: 1; /* Fade in */
+    }
+}
+
+.gallery h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    animation: slideInLeft 1s ease forwards; /* Apply animation */
+    opacity: 0; /* Start hidden */
+}
+
+/* Optionally, to trigger it on hover */
+.gallery:hover h2 {
+    animation: slideInLeft 1.2s ease forwards; /* Animation on hover */
+}
+
+.gallery-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+}
+
+.gallery-item {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    flex: 1 1 30%;
+    min-width: 250px;
+}
+
+.gallery-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.gallery-item h3 {
+    font-size: 1.5em;
+    color: #007bff;
+    margin: 10px 0;
+}
+
+.gallery-item p {
+    font-size: 1em;
+}
+
+
+footer {
+    background: #343a40;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
+}
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="workout.html">Workout Routines</a></li>
+                <li><a href="nutrition.html">Nutrition Guide</a></li>
+                <li><a href="photo.html">Photo Galleries</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="intro">
+        <h1>Photo Galleries</h1>
+        <p>Explore our inspiring photo galleries showcasing transformation stories, workout techniques, and more.</p>
+    </section>
+
+    <section class="gallery">
+        <h2>Transformation Stories</h2>
+        <div class="gallery-grid">
+            <article class="gallery-item">
+                <img src="https://static.boredpanda.com/blog/wp-content/uploads/2017/10/before-after-weight-loss-success-stories-fb12.png" alt="Before and after transformation" class="gallery-img">
+                <h3>Watson's Journey</h3>
+                <p>From 250 lbs to a healthier lifestyle. Watson shares his transformation story and tips.</p>
+            </article>
+            <article class="gallery-item">
+                <img src="https://www.beliteweight.com/blog/wp-content/uploads/2016/05/gastric_sleeve_tamaleb_13monthswm.jpg" alt="Before and after transformation" class="gallery-img">
+                <h3>Shradda Fitness Journey</h3>
+                <p>Shradda dedication to fitness led to an inspiring transformation. Here’s her story!</p>
+            </article>
+            <article class="gallery-item">
+                <img src="https://www.telegraph.co.uk/content/dam/health-fitness/2024/02/07/TELEMMGLPICT000365537145_17073086333330_trans_NvBQzQNjv4BqgCXocDQF5kP7s3jSjli3eCH0-jRUT4rHK8EgtaGoQwQ.jpeg?imwidth=680" alt="Before and after transformation" class="gallery-img">
+                <h3>Grace Weight Loss Success</h3>
+                <p>Grace lost 70 lbs and transformed his life. Discover how he did it.</p>
+            </article>
+        </div>
+    </section>
+
+    <section class="workout-techniques">
+        <h2 style="text-align: center;">Workout Techniques</h2>
+        <div class="gallery-grid">
+            <article class="gallery-item">
+                <img src="https://people.com/thmb/3ZicHuS_VPtMSAJa1iiRYEYw9bA=/4000x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(749x0:751x2)/linda-migliaccio-1-2086c9c13aff44d2aed0a852353cc4fd.jpg" alt="Squats technique" class="gallery-img">
+                <h3>Emiley's Weight loss journey</h3>
+                <p>Learn the fundamentals of the squat and how to perfect your form.</p>
+            </article>
+            <article class="gallery-item">
+                <img src="https://www.shape.com/thmb/PeEYRnOx85_P3UBfmCRB_y5Vw24=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Tina-Mansiyon-Primary-8ac04a6160134661a9adf2b41b00afa7.jpg" alt="Push-ups technique" class="gallery-img">
+                <h3>Aqsa's Weight loss journey</h3>
+                <p>Tips and tricks for maximizing your push-up effectiveness.</p>
+            </article>
+            <article class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1527933053326-89d1746b76b9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Deadlifts technique" class="gallery-img">
+                <h3>Deadlift Basics</h3>
+                <p>A guide to the deadlift and common mistakes to avoid.</p>
+            </article>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Fitness and Wellness. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
